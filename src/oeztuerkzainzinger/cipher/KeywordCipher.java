@@ -33,13 +33,19 @@ public class KeywordCipher {
 					alphabet[j] = '.';
 				}
 			}
-		// Und jetzt noch das Restalphabet in die neue Variable
-		// restAlpha zusammenfügen
+			// Und jetzt noch das Restalphabet in die neue Variable
+			// restAlpha zusammenfügen
 			if (alphabet[j] != '.') {
 				restAlpha = restAlpha + alphabet[j];
 			}
 
 		}
+		// Jetzt das eigentliche Geheimalphabet mit restAlphabet
+		// füllen
+		for (int i = lengthK; i < geheim.length; i++) {
+			geheim[i] = restAlpha.charAt(i - lengthK);
+		}
+
 
 	}
 
