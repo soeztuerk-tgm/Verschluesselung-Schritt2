@@ -5,6 +5,7 @@ import oeztuerkzainzinger.cipher.AnzahlZeichenException;
 import oeztuerkzainzinger.cipher.FalscherParameterException;
 import oeztuerkzainzinger.cipher.KeywordCipher;
 import oeztuerkzainzinger.cipher.MonoAlphabeticCipher;
+import oeztuerkzainzinger.cipher.ShiftCipher;
 import oeztuerkzainzinger.cipher.SubstitutionCipher;
 
 import org.junit.Test;
@@ -63,5 +64,9 @@ public class JunitTest {
 	@Test
 	public void testKeyWordCipher() {
 		KeywordCipher kc=new KeywordCipher("sefa");
+	}
+	@Test
+	public void testShiftCipher() {
+		ShiftCipher sc=new ShiftCipher(2);
 	}
 }

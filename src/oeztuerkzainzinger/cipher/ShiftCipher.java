@@ -26,7 +26,19 @@ public class ShiftCipher {
 				verschiebe[i] = alphabet[i];
 			}
 		}
-		
+
+		int zaehler = 0;
+		for (int i = hilf; i < geheim.length; i++) {
+			geheim[i] = verschiebe[zaehler];
+			zaehler++;
+		}
+
+		String ausgabe = "";
+		for (int i = 0; i < geheim.length; i++) {
+			ausgabe = ausgabe + geheim[i];
+		}
+
+		System.out.println("Cäsar: " + ausgabe);
 	}
 
 }
