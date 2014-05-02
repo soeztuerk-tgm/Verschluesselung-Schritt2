@@ -24,7 +24,23 @@ public class KeywordCipher {
 		for (int i = 0; i < lengthK; i++) {
 			geheim[i] = kennwort[i];
 		}
-		
+		// 2. Die restlichen Buchstaben finden
+		// Alle Buchstaben von Kennwort sollen im Alphabet als .
+		// markiert werden
+		for (int j = 0; j < alphabet.length; j++) {
+			for (int i = 0; i < lengthK; i++) {
+				if (alphabet[j] == kennwort[i]) {
+					alphabet[j] = '.';
+				}
+			}
+		// Und jetzt noch das Restalphabet in die neue Variable
+		// restAlpha zusammenfügen
+			if (alphabet[j] != '.') {
+				restAlpha = restAlpha + alphabet[j];
+			}
+
+		}
+
 	}
 
 }
