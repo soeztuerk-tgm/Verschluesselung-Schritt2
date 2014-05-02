@@ -45,7 +45,15 @@ public class KeywordCipher {
 		for (int i = lengthK; i < geheim.length; i++) {
 			geheim[i] = restAlpha.charAt(i - lengthK);
 		}
+		
+		//Endgültige Ausgabe erstellen
+		String ausgabe = "";
 
+		for (int i = 0; i < geheim.length; i++) {
+			ausgabe = ausgabe + geheim[i];
+		}
+
+		System.out.println("Ausgabe: " + ausgabe);
 
 	}
 
