@@ -1,5 +1,11 @@
 package oeztuerkzainzinger.cipher;
-public class KeywordCipher {
+/**
+ * Die Klasse KeywordChipher generiert ein Geheimalphabet
+ * aus einem übergebenen Schlüsselwort bzw. Kennwort.
+ * @author Sefa Öztürk
+ *
+ */
+public class KeywordCipher extends MonoAlphabeticCipher {
 
 	private String keyword;
 
@@ -25,7 +31,7 @@ public class KeywordCipher {
 			geheim[i] = kennwort[i];
 		}
 		// 2. Die restlichen Buchstaben finden
-		// Alle Buchstaben von Kennwort sollen im Alphabet als .
+		// Alle Buchstaben von Kennwort sollen im Alphabet als ein "."
 		// markiert werden
 		for (int j = 0; j < alphabet.length; j++) {
 			for (int i = 0; i < lengthK; i++) {
