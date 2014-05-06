@@ -13,6 +13,7 @@ import javax.swing.*;
  */
 
 public class GUI extends JFrame{
+	MyActionListener mal;
 	//tab und panels
 	JTabbedPane tab;
 	JPanel keyword, shift;
@@ -22,20 +23,21 @@ public class GUI extends JFrame{
 	JLabel kwlabel,kwalphabet,kwlabel2;
 	JTextField kweingabe,kwgeheimalphabet,worteingabe, ausgabe;
 	JButton kwalphaerstellen,kwdecrypt,kwencrypt;
-	
-	public GUI() {
+	public GUI(){
+	}
+	public GUI(String leer) {
+		mal=new MyActionListener();
 		//Deklarierung der Hauptkomponenten
 		tab=new JTabbedPane();
 		keyword=new JPanel();
 		shift=new JPanel();
-		tab.addTab("KeywordCipher",keyword);
-		tab.addTab("ShiftCipher",shift);
 		
 		////////////////////////////////////////////////////////
 		//Erste Zeile
 		kwlabel=new JLabel("1.) Bitte ein Kennwort fürs Geheimalphabet eingeben:");
 		kweingabe=new JTextField(10);
 		kwalphaerstellen=new JButton("Geheimalphabet erstellen");
+		kwalphaerstellen.addActionListener(mal);
 		//Nächste Zeile
 		kwalphabet=new JLabel("Das aktuelle Geheimalphabet:");
 		kwgeheimalphabet=new JTextField(30);
@@ -77,6 +79,10 @@ public class GUI extends JFrame{
 		keyword.add(kwhilf);
 		keyword.add(kwende);
 		keyword.add(ausgabe);
+		
+		//keyword-Panel dem Haupt-Tab adden
+		tab.addTab("KeywordCipher",keyword);
+		tab.addTab("ShiftCipher",shift);
 		
 		//Hauptfenster sichtbar machen und die 
 		//einzelnen Tabs dem Fenster hinzufügen
