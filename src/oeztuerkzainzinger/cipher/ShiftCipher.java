@@ -12,19 +12,21 @@ package oeztuerkzainzinger.cipher;
 public class ShiftCipher extends MonoAlphabeticCipher {
 	//Verschiebeanzahl
 	private int wert;
-
+	String shiftgeheim = "";
+	public ShiftCipher(){
+		
+	}
 	public ShiftCipher(int value) {
 		this.wert = value;
-
 		setShiftCipher(this.wert);
 	}
 
 	public void setShiftCipher(int wert) {
 		//Standardalphabet
-		String alpha = "abcdefghijklmnopqrstuvwxyz";
+		String alpha = "abcdefghijklmnopqrstuvwxyzäöüß";
 		//Alphabet nach char casten
 		char[] alphabet = alpha.toCharArray();
-		char[] geheim = new char[26];
+		char[] geheim = new char[30];
 		//Hilfvariable für die nächsten Schritte
 		int hilf = 0;
 		char[] verschiebe = new char[wert];
@@ -43,12 +45,9 @@ public class ShiftCipher extends MonoAlphabeticCipher {
 			zaehler++;
 		}
 
-		String ausgabe = "";
 		for (int i = 0; i < geheim.length; i++) {
-			ausgabe = ausgabe + geheim[i];
+			shiftgeheim = shiftgeheim + geheim[i];
 		}
-
-		System.out.println("Cäsar: " + ausgabe);
 	}
 
 }
