@@ -4,6 +4,13 @@ package oeztuerkzainzinger.cipher;
 import java.awt.*;
 
 import javax.swing.*;
+/**
+ * Diese Klasse erstellt das Hauptfenster mit den einzelnen Tabs 
+ * und deren Komponenten.
+ * 
+ * @author Sefa Öztürk
+ *
+ */
 
 public class GUI extends JFrame{
 	//tab und panels
@@ -26,7 +33,7 @@ public class GUI extends JFrame{
 		
 		////////////////////////////////////////////////////////
 		//Erste Zeile
-		kwlabel=new JLabel("1.) Bitte das Kennwort fürs Geheimalphabet eingeben:");
+		kwlabel=new JLabel("1.) Bitte ein Kennwort fürs Geheimalphabet eingeben:");
 		kweingabe=new JTextField(10);
 		kwalphaerstellen=new JButton("Geheimalphabet erstellen");
 		//Nächste Zeile
@@ -40,7 +47,7 @@ public class GUI extends JFrame{
 		kwencrypt=new JButton("Wort verschlüsseln!");
 		kwdecrypt=new JButton("Wort entschlüsseln!");
 		//Ausgabe letzte Zeile
-		ausgabe=new JTextField(10);
+		ausgabe=new JTextField(30);
 		ausgabe.setEditable(false);
 		///////////////////////////////////////////////////////
 		///////////////////////////////////////////////////////
@@ -49,30 +56,32 @@ public class GUI extends JFrame{
 		kwhilf=new JPanel(new FlowLayout());
 		kwende=new JPanel(new FlowLayout());
 		
-		
+		//Komponenten zum Hilfspanel hinzufügen
 		kwlaei.add(kwlabel);
 		kwlaei.add(kweingabe);
 		kwlaei.add(kwalphaerstellen);
-		
+		//Komponenten zum 2.Hilfspanel hinzufügen
 		kwtext.add(kwalphabet);
 		kwtext.add(kwgeheimalphabet);
-		
+		//Komponenten zum 3.Hilfspanel hinzufügen
 		kwhilf.add(kwlabel2);
 		kwhilf.add(worteingabe);
-		
+		//Komponenten zum 4.Hilfspanel hinzufügen
 		kwende.add(kwencrypt);
 		kwende.add(kwdecrypt);
 		///////////////////////////////////////////////////////
 		///////////////////////////////////////////////////////
+		//Alle 4 Hilfspanel und die Ausgabe in das keywordtab zusammenfügen
 		keyword.add(kwlaei);
 		keyword.add(kwtext);
 		keyword.add(kwhilf);
 		keyword.add(kwende);
 		keyword.add(ausgabe);
+		
 		//Hauptfenster sichtbar machen und die 
 		//einzelnen Tabs dem Fenster hinzufügen
 		this.add(tab);
-		this.setSize(620,400);
+		this.setSize(640,400);
 		this.setVisible(true);
 	}
 }
