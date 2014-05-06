@@ -65,9 +65,6 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		for (int i = 0; i < geheim.length; i++) {
 			keywordAlphabet = keywordAlphabet + geheim[i];
 		}
-
-		System.out.println("KeywordGeheimalphabet: " + keywordAlphabet);
-
 	}
 
 }

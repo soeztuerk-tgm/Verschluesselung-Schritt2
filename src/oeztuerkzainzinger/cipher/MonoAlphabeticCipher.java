@@ -12,9 +12,9 @@ public class MonoAlphabeticCipher implements Cipher {
 
 	// Das Attribut alphabet ist das Standardalphabet
 	private String alphabet;
+	private String secretAlphabet;
 	// Privates Attribut secretAlphabet ist zunächst das Ausgangsalphabet, das später
 	//mit der Methode setSecretAlphabet mit einem ander Alphabet ersetzt werden kann
-	private String secretAlphabet;
 
 	/**
 	 * Das ist der Default-Konstruktor
@@ -79,7 +79,7 @@ public class MonoAlphabeticCipher implements Cipher {
 			}
 		}
 		//Das verschlüsselte Wort zurückgeben
-		return "Verschlüsseltes Wort: " + verschlüsselt;
+		return verschlüsselt;
 	}
 	/**
 	 * decrypt ist eine Methode zum entschlüsseln von Wörtern
@@ -89,6 +89,7 @@ public class MonoAlphabeticCipher implements Cipher {
 	 */
 	@Override
 	public String decrypt(String text) throws FalscherParameterException {
+		
 		String entschlüsselt = "";
 		//hier gilt dasselbe nur  umgekehrt mit dem GEHEIMALPHABET
 		boolean a = text.matches(".*[^" + secretAlphabet + "].*");
@@ -104,6 +105,6 @@ public class MonoAlphabeticCipher implements Cipher {
 			}
 		}
 		//Das entschlüsselte Wort zurückgeben
-		return "Entschlüsseltes Wort: " + entschlüsselt;
+		return entschlüsselt;
 	}
 }
