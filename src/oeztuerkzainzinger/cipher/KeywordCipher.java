@@ -12,6 +12,7 @@ package oeztuerkzainzinger.cipher;
 public class KeywordCipher extends MonoAlphabeticCipher {
 
 	private String keyword;
+	String keywordAlphabet = "";
 	
 	public KeywordCipher(){
 	}
@@ -59,7 +60,7 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		}
 		
 		//Endgültige Ausgabe erstellen
-		String keywordAlphabet = "";
+		
 
 		for (int i = 0; i < geheim.length; i++) {
 			keywordAlphabet = keywordAlphabet + geheim[i];

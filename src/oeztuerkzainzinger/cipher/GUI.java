@@ -2,6 +2,8 @@ package oeztuerkzainzinger.cipher;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.*;
 /**
@@ -12,32 +14,32 @@ import javax.swing.*;
  *
  */
 
-public class GUI extends JFrame{
-	MyActionListener mal;
+public class GUI extends JFrame implements ActionListener{
 	//tab und panels
+
 	JTabbedPane tab;
 	JPanel keyword, shift;
-	
+
 	JPanel kwlaei,kwtext,kwhilf,kwende;
-	
+
 	JLabel kwlabel,kwalphabet,kwlabel2;
 	JTextField kweingabe,kwgeheimalphabet,worteingabe, ausgabe;
 	JButton kwalphaerstellen,kwdecrypt,kwencrypt;
 	public GUI(){
 	}
 	public GUI(String leer) {
-		mal=new MyActionListener();
 		//Deklarierung der Hauptkomponenten
 		tab=new JTabbedPane();
 		keyword=new JPanel();
 		shift=new JPanel();
-		
+
 		////////////////////////////////////////////////////////
 		//Erste Zeile
 		kwlabel=new JLabel("1.) Bitte ein Kennwort fürs Geheimalphabet eingeben:");
 		kweingabe=new JTextField(10);
+
 		kwalphaerstellen=new JButton("Geheimalphabet erstellen");
-		kwalphaerstellen.addActionListener(mal);
+		kwalphaerstellen.addActionListener(this);
 		//Nächste Zeile
 		kwalphabet=new JLabel("Das aktuelle Geheimalphabet:");
 		kwgeheimalphabet=new JTextField(30);
@@ -48,6 +50,8 @@ public class GUI extends JFrame{
 		//4.Zeile
 		kwencrypt=new JButton("Wort verschlüsseln!");
 		kwdecrypt=new JButton("Wort entschlüsseln!");
+		kwencrypt.addActionListener(this);
+		kwdecrypt.addActionListener(this);
 		//Ausgabe letzte Zeile
 		ausgabe=new JTextField(30);
 		ausgabe.setEditable(false);
@@ -57,7 +61,7 @@ public class GUI extends JFrame{
 		kwtext=new JPanel(new FlowLayout());
 		kwhilf=new JPanel(new FlowLayout());
 		kwende=new JPanel(new FlowLayout());
-		
+
 		//Komponenten zum Hilfspanel hinzufügen
 		kwlaei.add(kwlabel);
 		kwlaei.add(kweingabe);
@@ -79,15 +83,25 @@ public class GUI extends JFrame{
 		keyword.add(kwhilf);
 		keyword.add(kwende);
 		keyword.add(ausgabe);
-		
+
 		//keyword-Panel dem Haupt-Tab adden
 		tab.addTab("KeywordCipher",keyword);
 		tab.addTab("ShiftCipher",shift);
-		
+
 		//Hauptfenster sichtbar machen und die 
 		//einzelnen Tabs dem Fenster hinzufügen
 		this.add(tab);
 		this.setSize(640,400);
 		this.setVisible(true);
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		KeywordCipher kc=new KeywordCipher();
+		MonoAlphabeticCipher mac=new MonoAlphabeticCipher();
+		///////////////////////////////////////////////////////
+		if("Geheimalphabet erstellen".equals(e.getActionCommand())){
+			kc.setKeyword(kweingabe.getText());
+			kwgeheimalphabet.setText(kc.keywordAlphabet);
+		}
 	}
 }
