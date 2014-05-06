@@ -1,7 +1,11 @@
 package oeztuerkzainzinger.cipher;
 /**
  * Die Klasse KeywordChipher generiert ein Geheimalphabet
- * aus einem übergebenen Schlüsselwort bzw. Kennwort.
+ * aus einem übergebenen Schlüsselwort bzw. Kennwort. Dazu 
+ * muss beim Konstruktor und bei der Methode setKeyword()
+ * ein gültiger Passwort angegeben werden. Das Geheimalphabet 
+ * soll dann aus diesem Passwort generiert werden.
+ * 
  * @author Sefa Öztürk
  *
  */
@@ -11,18 +15,17 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 
 	public KeywordCipher(String keyword) {
 		this.keyword = keyword;
-
 		setKeyword(this.keyword);
 	}
 
 	public void setKeyword(String keyword) {
 
-		String alpha = "abcdefghijklmnopqrstuvwxyz";
+		String alpha = "abcdefghijklmnopqrstuvwxyzäüöß";
 
 		char[] alphabet = alpha.toCharArray();
 		char[] kennwort = keyword.toCharArray();
 
-		char[] geheim = new char[26];
+		char[] geheim = new char[30];
 		int lengthK = kennwort.length;
 		String restAlpha = "";
 
@@ -53,13 +56,13 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		}
 		
 		//Endgültige Ausgabe erstellen
-		String ausgabe = "";
+		String keywordAlphabet = "";
 
 		for (int i = 0; i < geheim.length; i++) {
-			ausgabe = ausgabe + geheim[i];
+			keywordAlphabet = keywordAlphabet + geheim[i];
 		}
 
-		System.out.println("Ausgabe: " + ausgabe);
+		System.out.println("KeywordGeheimalphabet: " + keywordAlphabet);
 
 	}
 
