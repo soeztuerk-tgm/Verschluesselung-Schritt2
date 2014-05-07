@@ -63,10 +63,18 @@ public class JunitTest {
 	
 	@Test
 	public void testKeyWordCipher() {
-		KeywordCipher kc=new KeywordCipher("sefa");
+		try {
+			KeywordCipher kc=new KeywordCipher("sefa");
+		} catch (FalscherParameterException e) {
+			System.out.println("Falsches Parameter");
+		}
 	}
 	@Test
 	public void testShiftCipher() {
-		ShiftCipher sc=new ShiftCipher(2);
+		try {
+			ShiftCipher sc=new ShiftCipher(2);
+		} catch (FalscherParameterException e) {
+			System.out.println("Falsches Parameter");
+		}
 	}
 }
