@@ -17,13 +17,12 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 	public KeywordCipher(){
 	}
 	
-	public KeywordCipher(String keyword) {
+	public KeywordCipher(String keyword) throws FalscherParameterException {
 		this.keyword = keyword;
 		setKeyword(this.keyword);
 	}
 
-	public void setKeyword(String keyword) {
-
+	public void setKeyword(String keyword) throws FalscherParameterException {
 		String alpha = "abcdefghijklmnopqrstuvwxyzäüöß";
 
 		char[] alphabet = alpha.toCharArray();

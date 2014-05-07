@@ -165,7 +165,11 @@ public class GUI extends JFrame implements ActionListener{
 		///////////////////////////////////////////////////////
 		if("Geheimalphabet generieren".equals(e.getActionCommand())){
 			worteingabe.setEditable(true);
-			kc.setKeyword(kweingabe.getText());
+			try {
+				kc.setKeyword(kweingabe.getText());
+			} catch (FalscherParameterException e2) {
+				System.out.println("Falsches Parameter");
+			}
 			kwgeheimalphabet.setText(kc.keywordAlphabet);
 			try {
 				mac.setSecretAlphabet(kc.keywordAlphabet);
@@ -175,7 +179,11 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		//////////////////////////////////////////////////////
 		if("Wort verschlüsseln!".equals(e.getActionCommand())){
-			kc.setKeyword(kweingabe.getText());
+			try {
+				kc.setKeyword(kweingabe.getText());
+			} catch (FalscherParameterException e3) {
+				System.out.println("Falsches Parameter");
+			}
 			try {
 				//Zuerst Geheimalphabet setzten 
 				mac.setSecretAlphabet(kc.keywordAlphabet);
@@ -190,7 +198,11 @@ public class GUI extends JFrame implements ActionListener{
 		}
 		////////////////////////////////////////////////////////
 		if("Wort entschlüsseln!".equals(e.getActionCommand())){
-			kc.setKeyword(kweingabe.getText());
+			try {
+				kc.setKeyword(kweingabe.getText());
+			} catch (FalscherParameterException e3) {
+				System.out.println("Falsches Parameter");
+			}
 			try {
 				//Zuerst Geheimalphabet setzten 
 				mac.setSecretAlphabet(kc.keywordAlphabet);
@@ -207,8 +219,15 @@ public class GUI extends JFrame implements ActionListener{
 		if("Geheimalphabet erstellen".equals(e.getActionCommand())){
 			worteingabe2.setEditable(true);
 			String hilf=sceingabe.getText();
-			int wert=Integer.parseInt(hilf);
-			sc.setShiftCipher(wert);
+			int wert;
+			try {
+				wert=Integer.parseInt(hilf);
+				sc.setShiftCipher(wert);
+			} catch (FalscherParameterException e2) {
+				System.out.println("Falsches Parameter");
+			} catch (NumberFormatException nfe){
+				
+			}
 			scgeheimalphabet.setText(sc.shiftgeheim);
 			try {
 				mac.setSecretAlphabet(sc.shiftgeheim);
@@ -220,7 +239,12 @@ public class GUI extends JFrame implements ActionListener{
 		if("Wort verschlüsseln".equals(e.getActionCommand())){
 			String hilf=sceingabe.getText();
 			int wert=Integer.parseInt(hilf);
-			sc.setShiftCipher(wert);
+			try {
+				sc.setShiftCipher(wert);
+			} catch (FalscherParameterException e3) {
+				System.out.println("Falsches Parameter");
+			}
+
 			try {
 				//Zuerst Geheimalphabet setzten 
 				mac.setSecretAlphabet(sc.shiftgeheim);
@@ -237,7 +261,11 @@ public class GUI extends JFrame implements ActionListener{
 		if("Wort entschlüsseln".equals(e.getActionCommand())){
 			String hilf=sceingabe.getText();
 			int wert=Integer.parseInt(hilf);
-			sc.setShiftCipher(wert);
+			try {
+				sc.setShiftCipher(wert);
+			} catch (FalscherParameterException e3) {
+				System.out.println("Falsches Parameter");
+			}
 			try {
 				//Zuerst Geheimalphabet setzten 
 				mac.setSecretAlphabet(sc.shiftgeheim);
