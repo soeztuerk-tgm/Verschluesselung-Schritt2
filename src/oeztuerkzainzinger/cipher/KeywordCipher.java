@@ -12,7 +12,7 @@ package oeztuerkzainzinger.cipher;
 public class KeywordCipher extends MonoAlphabeticCipher {
 
 	private String keyword;
-	String keywordAlphabet = "";
+	public String keywordAlphabet = "";
 	
 	public KeywordCipher(){
 	}

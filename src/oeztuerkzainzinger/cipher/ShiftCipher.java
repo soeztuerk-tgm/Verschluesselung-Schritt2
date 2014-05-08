@@ -12,7 +12,7 @@ package oeztuerkzainzinger.cipher;
 public class ShiftCipher extends MonoAlphabeticCipher {
 	//Verschiebeanzahl
 	private int wert;
-	String shiftgeheim = "";
+	public String shiftgeheim = "";
 	public ShiftCipher(){
 
 	}
