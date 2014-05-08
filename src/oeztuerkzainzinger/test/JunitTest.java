@@ -7,6 +7,7 @@ import oeztuerkzainzinger.cipher.KeywordCipher;
 import oeztuerkzainzinger.cipher.MonoAlphabeticCipher;
 import oeztuerkzainzinger.cipher.ShiftCipher;
 import oeztuerkzainzinger.cipher.SubstitutionCipher;
+import oeztuerkzainzinger.gui.GUI;
 
 import org.junit.Test;
 
@@ -17,6 +18,7 @@ public class JunitTest {
 	String secretAlphabet="xyzabcdefghijklmnopqrstuvwäüöß";
 	//Neues Objekt aus der Klasse MAC
 	MonoAlphabeticCipher mac=new MonoAlphabeticCipher();
+	SubstitutionCipher sub;
 
 	@Test
 	public void testSetSecretAlphabet() {
@@ -28,7 +30,17 @@ public class JunitTest {
 			System.out.println("Anzahl Buchstaben im Geheimalphabet falsch");
 		}
 	}
-
+	@Test
+	public void testSubstitutionCipher() throws AnzahlZeichenException {
+		sub=new SubstitutionCipher(secretAlphabet);
+		try {
+			//Versuch, ob die Anzahl an Buchstaben im Geheimalphabet richtig ist
+			sub.setSecretAlphabet(secretAlphabet);
+			//Wenn was schief geht, dann halt Exception werfen
+		} catch (AnzahlZeichenException e) {
+			System.out.println("Anzahl Buchstaben im Geheimalphabet falsch");
+		}
+	}
 	@Test
 	public void testEncrypt() throws AnzahlZeichenException{
 		try {
@@ -64,6 +76,7 @@ public class JunitTest {
 	@Test
 	public void testKeyWordCipher() {
 		try {
+			KeywordCipher kc2=new KeywordCipher();
 			KeywordCipher kc=new KeywordCipher("sefa");
 		} catch (FalscherParameterException e) {
 			System.out.println("Falsches Parameter");
@@ -72,9 +85,26 @@ public class JunitTest {
 	@Test
 	public void testShiftCipher() {
 		try {
+			ShiftCipher sc2=new ShiftCipher();
 			ShiftCipher sc=new ShiftCipher(2);
 		} catch (FalscherParameterException e) {
 			System.out.println("Falsches Parameter");
 		}
+	}
+	@Test
+	public void testGUI(){
+		new GUI();
+	}
+	@Test
+	public void Exception(){
+		new AnzahlZeichenException();
+		new AnzahlZeichenException("Falsch");
+		new FalscherParameterException();
+		new FalscherParameterException("Falsch Parameter");
+	}
+	@Test
+	public void acion(){
+		GUI g=new GUI("");
+		g.actionPerformed();
 	}
 }

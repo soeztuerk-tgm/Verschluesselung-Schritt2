@@ -39,12 +39,10 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		// 2. Die restlichen Buchstaben finden
 		// Alle Buchstaben von Kennwort sollen im Alphabet als ein "."
 		// markiert werden
-		int zaehler=0;
 		for (int j = 0; j < alphabet.length; j++) {
 			for (int i = 0; i < lengthK; i++) {
 				if (alphabet[j] == kennwort[i]) {
 					alphabet[j] = '.';
-					zaehler++;
 				}
 			}
 			
@@ -53,10 +51,6 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 			if (alphabet[j] != '.') {
 				restAlpha = restAlpha + alphabet[j];
 			}
-		}
-		
-		if(zaehler==0){
-			throw new FalscherParameterException();
 		}
 		// Jetzt das eigentliche Geheimalphabet mit restAlphabet
 		// füllen
