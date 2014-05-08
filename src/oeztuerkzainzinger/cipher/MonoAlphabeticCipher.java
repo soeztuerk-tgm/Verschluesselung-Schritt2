@@ -57,7 +57,7 @@ public class MonoAlphabeticCipher implements Cipher {
 	@Override
 	public String encrypt(String text) throws FalscherParameterException {
 		//verschlüsselt=ausgabewort
-		String verschlüsselt = "";
+		String verschluesselt = "";
 		//die matches methode vergleicht ein String mit einem Regulären Ausdruck
 		//und gibt true oder false zurück.
 		
@@ -73,13 +73,13 @@ public class MonoAlphabeticCipher implements Cipher {
 			for (int i = 0; i < text.length(); i++) {
 				for (int j = 0; j < alphabet.length(); j++) {
 					if (alphabet.charAt(j) == (text.charAt(i))) {
-						verschlüsselt += secretAlphabet.charAt(j);
+						verschluesselt += secretAlphabet.charAt(j);
 					}
 				}
 			}
 		}
 		//Das verschlüsselte Wort zurückgeben
-		return verschlüsselt;
+		return verschluesselt;
 	}
 	/**
 	 * decrypt ist eine Methode zum entschlüsseln von Wörtern
@@ -90,7 +90,7 @@ public class MonoAlphabeticCipher implements Cipher {
 	@Override
 	public String decrypt(String text) throws FalscherParameterException {
 		
-		String entschlüsselt = "";
+		String entschluesselt = "";
 		//hier gilt dasselbe nur  umgekehrt mit dem GEHEIMALPHABET
 		boolean a = text.matches(".*[^" + secretAlphabet + "].*");
 		if (a == true) {
@@ -99,12 +99,12 @@ public class MonoAlphabeticCipher implements Cipher {
 			for (int i = 0; i < text.length(); i++) {
 				for (int j = 0; j < secretAlphabet.length(); j++) {
 					if (secretAlphabet.charAt(j) == text.charAt(i)) {
-						entschlüsselt += alphabet.charAt(j);
+						entschluesselt += alphabet.charAt(j);
 					}
 				}
 			}
 		}
 		//Das entschlüsselte Wort zurückgeben
-		return entschlüsselt;
+		return entschluesselt;
 	}
 }

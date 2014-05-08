@@ -50,7 +50,7 @@ public class GUI extends JFrame implements ActionListener{
 
 		////////////////////////////////////////////////////////
 		//Erste Zeile
-		kwlabel=new JLabel("1.) Bitte ein Kennwort fürs Geheimalphabet eingeben:");
+		kwlabel=new JLabel("1.) Bitte ein Kennwort fuers Geheimalphabet eingeben:");
 		kweingabe=new JTextField(10);
 
 		kwalphaerstellen=new JButton("Geheimalphabet generieren");
@@ -60,12 +60,12 @@ public class GUI extends JFrame implements ActionListener{
 		kwgeheimalphabet=new JTextField(30);
 		kwgeheimalphabet.setEditable(false);
 		//3.Zeile
-		kwlabel2=new JLabel("2.) Wort zum Entschlüsseln oder Verschlüsseln eingeben:");
+		kwlabel2=new JLabel("2.) Wort zum Entschluesseln oder Verschlüsseln eingeben:");
 		worteingabe=new JTextField(20);
 		worteingabe.setEditable(false);
 		//4.Zeile
-		kwencrypt=new JButton("Wort verschlüsseln!");
-		kwdecrypt=new JButton("Wort entschlüsseln!");
+		kwencrypt=new JButton("Wort verschluesseln!");
+		kwdecrypt=new JButton("Wort entschluesseln!");
 		kwencrypt.addActionListener(this);
 		kwdecrypt.addActionListener(this);
 		//Ausgabe letzte Zeile
@@ -102,7 +102,7 @@ public class GUI extends JFrame implements ActionListener{
 		/////////////////////////////////////////////////////
 		/////////////////////////////////////////////////////
 		//Erste Zeile
-		sclabel=new JLabel("         1.) Bitte ein Verschiebewert fürs Geheimalphabet eingeben:");
+		sclabel=new JLabel("         1.) Bitte ein Verschiebewert fuers Geheimalphabet eingeben:");
 		sceingabe=new JTextField(10);
 
 		scalphaerstellen=new JButton("Geheimalphabet erstellen");
@@ -112,12 +112,12 @@ public class GUI extends JFrame implements ActionListener{
 		scgeheimalphabet=new JTextField(30);
 		scgeheimalphabet.setEditable(false);
 		//3.Zeile
-		sclabel2=new JLabel("2.) Wort zum Entschlüsseln oder Verschlüsseln eingeben:");
+		sclabel2=new JLabel("2.) Wort zum Entschluesseln oder Verschluesseln eingeben:");
 		worteingabe2=new JTextField(20);
 		worteingabe2.setEditable(false);
 		//4.Zeile
-		scencrypt=new JButton("Wort verschlüsseln");
-		scdecrypt=new JButton("Wort entschlüsseln");
+		scencrypt=new JButton("Wort verschluesseln");
+		scdecrypt=new JButton("Wort entschluesseln");
 		scencrypt.addActionListener(this);
 		scdecrypt.addActionListener(this);
 		//Ausgabe letzte Zeile
@@ -174,13 +174,13 @@ public class GUI extends JFrame implements ActionListener{
 			try {
 				kc.setKeyword(kweingabe.getText());
 			} catch (FalscherParameterException e2) {
-				System.out.println("Falsches Parameter");
+				System.out.println("Falscher Parameter");
 			}
 			kwgeheimalphabet.setText(kc.keywordAlphabet);
 			try {
 				mac.setSecretAlphabet(kc.keywordAlphabet);
 			} catch (AnzahlZeichenException e1) {
-				System.out.println("Anzahl der Buchstaben falsch");
+				System.out.println("Anzahl der Buchstaben ist falsch");
 			}
 		}
 		//////////////////////////////////////////////////////
@@ -197,7 +197,7 @@ public class GUI extends JFrame implements ActionListener{
 				ausgabe.setText(mac.encrypt(worteingabe.getText()));
 				//Wenn was schief geht, dann halt Exception werfen
 			} catch (FalscherParameterException e2) {
-				System.out.println("Ungültiges Zeichen ins Parameter eingegeben");
+				System.out.println("Ungueltiges Zeichen ins Parameter eingegeben");
 			} catch (AnzahlZeichenException e1) {
 				System.out.println("Anzahl der Buchstaben falsch");
 			} 
@@ -216,7 +216,7 @@ public class GUI extends JFrame implements ActionListener{
 				ausgabe.setText(mac.decrypt(worteingabe.getText()));
 				//Wenn was schief geht, dann halt Exception werfen
 			} catch (FalscherParameterException e2) {
-				System.out.println("Ungültiges Zeichen ins Parameter eingegeben");
+				System.out.println("Ungueltiges Zeichen ins Parameter eingegeben");
 			} catch (AnzahlZeichenException e1) {
 				System.out.println("Anzahl der Buchstaben falsch");
 			} 
@@ -238,7 +238,7 @@ public class GUI extends JFrame implements ActionListener{
 			try {
 				mac.setSecretAlphabet(sc.shiftgeheim);
 			} catch (AnzahlZeichenException e1) {
-				System.out.println("Anzahl der Buchstaben falsch");
+				System.out.println("Anzahl der Buchstaben ist falsch");
 			}
 		}
 		//////////////////////////////////////////////////////
@@ -258,7 +258,7 @@ public class GUI extends JFrame implements ActionListener{
 				ausgabe2.setText(mac.encrypt(worteingabe2.getText()));
 				//Wenn was schief geht, dann halt Exception werfen
 			} catch (FalscherParameterException e2) {
-				System.out.println("Ungültiges Zeichen ins Parameter eingegeben");
+				System.out.println("Ungueltiges Zeichen ins Parameter eingegeben");
 			} catch (AnzahlZeichenException e1) {
 				System.out.println("Anzahl der Buchstaben falsch");
 			} 
@@ -279,7 +279,7 @@ public class GUI extends JFrame implements ActionListener{
 				ausgabe2.setText(mac.decrypt(worteingabe2.getText()));
 				//Wenn was schief geht, dann halt Exception werfen
 			} catch (FalscherParameterException e2) {
-				System.out.println("Ungültiges Zeichen ins Parameter eingegeben");
+				System.out.println("Ungueltiges Zeichen ins Parameter eingegeben");
 			} catch (AnzahlZeichenException e1) {
 				System.out.println("Anzahl der Buchstaben falsch");
 			} 

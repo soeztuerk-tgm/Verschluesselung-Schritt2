@@ -105,6 +105,6 @@ public class JunitTest {
 	@Test
 	public void acion(){
 		GUI g=new GUI("");
-		g.actionPerformed();
+		g.actionPerformed(null);
 	}
 }
