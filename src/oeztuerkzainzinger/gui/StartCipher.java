@@ -1,6 +1,5 @@
-package oeztuerkzainzinger.cipher;
+package oeztuerkzainzinger.gui;
 
-import oeztuerkzainzinger.gui.GUI;
 
 /**
  * Main-Methode startet die GUI
