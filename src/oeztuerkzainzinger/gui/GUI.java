@@ -137,7 +137,7 @@ public class GUI extends JFrame implements ActionListener{
 		//Komponenten zum 2.Hilfspanel hinzufügen
 		sctext.add(scalphabet);
 		sctext.add(scgeheimalphabet);
-		//Komponenten zum 3.Hilfspanel hinzufügen
+		///Komponenten zum 3.Hilfspanel hinzufügen
 		schilf.add(sclabel2);
 		schilf.add(worteingabe2);
 		//Komponenten zum 4.Hilfspanel hinzufügen
