@@ -5,7 +5,7 @@ package oeztuerkzainzinger.cipher;
 
 /**
  * 
- * @author lukaszainzinger
+ * @author lukas zainzinger
  *
  */
 public class TestTranspo {

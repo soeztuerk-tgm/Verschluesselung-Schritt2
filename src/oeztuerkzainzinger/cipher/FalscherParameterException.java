@@ -1,7 +1,7 @@
 package oeztuerkzainzinger.cipher;
 /**
  * Klasse FalscherParameterException ist eine Exception-Klasse,dass bei Fehelrmeldungen,
- * bei Eingabe von einem ungültigen Parameter in Klassen eingesetzt wird.
+ * bei Eingabe von einem ungültigen Parameter in Klassen eingesetzt wird
  * @author Sefa
  *
  */

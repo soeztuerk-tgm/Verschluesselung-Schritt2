@@ -3,7 +3,7 @@ package oeztuerkzainzinger.cipher;
 /**
  * Die Klasse MonoAlphabeticCipher stellt die Basisfunktionalitäten auf Basis
  * des Interfaces Cipher zur Verfügung und setzt das Geheimalphabet immer auf
- * das Ausgangsalphabet.
+ * das Ausgangsalphabet
  * 
  * @author Sefa Öztürk, Lukas Zainzinger
  * @date 06.04.2014

@@ -14,7 +14,7 @@ import oeztuerkzainzinger.cipher.MonoAlphabeticCipher;
 import oeztuerkzainzinger.cipher.ShiftCipher;
 /**
  * Diese Klasse erstellt das Hauptfenster mit den einzelnen Tabs 
- * und deren Komponenten.
+ * und deren Komponenten
  * 
  * @author Sefa Öztürk
  *

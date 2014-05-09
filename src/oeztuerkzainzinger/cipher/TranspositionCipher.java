@@ -21,7 +21,7 @@ public class TranspositionCipher implements Cipher {
 		if(lvl > 0) {
 			this.transpositionlvl = lvl;
 		}else{
-			throw new FalscherParameterException("Level muss größer 0 sein!");
+			throw new FalscherParameterException("Level muss groeﬂer 0 sein!");
 		}
 	}
 	/**

@@ -12,7 +12,7 @@ import oeztuerkzainzinger.gui.GUI;
 
 import org.junit.Test;
 /**
- * Die Testklasse testet alle Klassen mit deren Methoden
+ * Die Testklasse testet alle Klassen mit deren Methoden.
  * 
  * @author Sefa Öztürk, Zainzinger Lukas
  *

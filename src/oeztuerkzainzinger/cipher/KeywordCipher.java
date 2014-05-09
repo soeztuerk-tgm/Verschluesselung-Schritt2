@@ -23,7 +23,7 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 	}
 	/**
 	 * Die Methode setKeyword besitzt einen parameter keyword mit dem dann das
-	 * geheime Alphabet mittels dem KeywordCipher-Verfahren generiert werden soll.
+	 * geheime Alphabet mittels dem KeywordCipher-Verfahren generiert werden soll
 	 * 
 	 * @param keyword
 	 * @throws FalscherParameterException

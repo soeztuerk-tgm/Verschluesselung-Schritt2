@@ -3,7 +3,7 @@ package oeztuerkzainzinger.cipher;
  * Die Klasse ShiftCipher soll einen Verschiebechiffre implementieren. 
  * Dazu muss beim Konstruktor und bei der Methode setShiftAmount() der
  * Wert der Verschiebung angegeben werden. Das Geheimalphabet soll dann 
- * aus diesem Verschiebewert generiert werden.
+ * aus diesem Verschiebewert generiert werden
  * 
  * 
  * @author Sefa Öztürk

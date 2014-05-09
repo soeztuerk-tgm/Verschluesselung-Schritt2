@@ -2,7 +2,7 @@ package oeztuerkzainzinger.cipher;
 /**
  * Die Klasse SubstitutionCipher soll eine allgemeine Substitionsverschlüsselung darstellen. 
  * Dazu muss das gesamte Geheimalphabet an ein Objekt dieser Klasse im Konstruktor oder in der 
- * Methode setSecretAlphabet übergeben werden.
+ * Methode setSecretAlphabet übergeben werden
  *
  */
 public class SubstitutionCipher extends MonoAlphabeticCipher {

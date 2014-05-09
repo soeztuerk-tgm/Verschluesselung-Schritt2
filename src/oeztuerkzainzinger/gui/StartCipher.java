@@ -2,7 +2,7 @@ package oeztuerkzainzinger.gui;
 
 
 /**
- * Main-Methode startet die GUI
+ * Main-Methode startet die GUI-Klasse
  * 
  * @author Sefa Öztürk
  */
