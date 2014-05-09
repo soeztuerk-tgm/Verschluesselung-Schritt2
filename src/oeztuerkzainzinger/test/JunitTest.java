@@ -94,6 +94,7 @@ public class JunitTest {
 	@Test
 	public void testGUI(){
 		new GUI();
+		new GUI("");
 	}
 	@Test
 	public void Exception(){
@@ -101,10 +102,5 @@ public class JunitTest {
 		new AnzahlZeichenException("Falsch");
 		new FalscherParameterException();
 		new FalscherParameterException("Falsch Parameter");
-	}
-	@Test
-	public void acion(){
-		GUI g=new GUI("");
-		g.actionPerformed();
 	}
 }
