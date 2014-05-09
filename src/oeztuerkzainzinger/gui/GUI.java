@@ -64,8 +64,8 @@ public class GUI extends JFrame implements ActionListener{
 		worteingabe=new JTextField(20);
 		worteingabe.setEditable(false);
 		//4.Zeile
-		kwencrypt=new JButton("Wort verschlüsseln!");
-		kwdecrypt=new JButton("Wort entschlüsseln!");
+		kwencrypt=new JButton("Wort verschluesseln!");
+		kwdecrypt=new JButton("Wort entschluesseln!");
 		kwencrypt.addActionListener(this);
 		kwdecrypt.addActionListener(this);
 		//Ausgabe letzte Zeile
@@ -116,8 +116,8 @@ public class GUI extends JFrame implements ActionListener{
 		worteingabe2=new JTextField(20);
 		worteingabe2.setEditable(false);
 		//4.Zeile
-		scencrypt=new JButton("Wort verschlüsseln");
-		scdecrypt=new JButton("Wort entschlüsseln");
+		scencrypt=new JButton("Wort verschluesseln");
+		scdecrypt=new JButton("Wort entschluesseln");
 		scencrypt.addActionListener(this);
 		scdecrypt.addActionListener(this);
 		//Ausgabe letzte Zeile
@@ -184,7 +184,7 @@ public class GUI extends JFrame implements ActionListener{
 			}
 		}
 		//////////////////////////////////////////////////////
-		if("Wort verschlüsseln!".equals(e.getActionCommand())){
+		if("Wort verschluesseln!".equals(e.getActionCommand())){
 			try {
 				kc.setKeyword(kweingabe.getText());
 			} catch (FalscherParameterException e3) {
@@ -203,7 +203,7 @@ public class GUI extends JFrame implements ActionListener{
 			} 
 		}
 		////////////////////////////////////////////////////////
-		if("Wort entschlüsseln!".equals(e.getActionCommand())){
+		if("Wort entschluesseln!".equals(e.getActionCommand())){
 			try {
 				kc.setKeyword(kweingabe.getText());
 			} catch (FalscherParameterException e3) {
@@ -242,7 +242,7 @@ public class GUI extends JFrame implements ActionListener{
 			}
 		}
 		//////////////////////////////////////////////////////
-		if("Wort verschlüsseln".equals(e.getActionCommand())){
+		if("Wort verschluesseln".equals(e.getActionCommand())){
 			String hilf=sceingabe.getText();
 			int wert=Integer.parseInt(hilf);
 			try {
@@ -264,7 +264,7 @@ public class GUI extends JFrame implements ActionListener{
 			} 
 		}
 		////////////////////////////////////////////////////////
-		if("Wort entschlüsseln".equals(e.getActionCommand())){
+		if("Wort entschluesseln".equals(e.getActionCommand())){
 			String hilf=sceingabe.getText();
 			int wert=Integer.parseInt(hilf);
 			try {
