@@ -23,7 +23,7 @@ import oeztuerkzainzinger.cipher.ShiftCipher;
 public class GUI extends JFrame implements ActionListener{
 	//tab und panels
 	JTabbedPane tab;
-	JPanel keyword, shift;
+	JPanel keyword, shift, trans;
 
 	//Ab dieser Zeile beginnt die Komponentendeklarierung von KeywordCipher
 	JPanel kwlaei,kwtext,kwhilf,kwende;
@@ -156,6 +156,7 @@ public class GUI extends JFrame implements ActionListener{
 		//keyword-Panel dem Haupt-Tab adden
 		tab.addTab("KeywordCipher",keyword);
 		tab.addTab("ShiftCipher",shift);
+		tab.addTab("TranspositionCipher",trans);
 
 		//Hauptfenster sichtbar machen und die 
 		//einzelnen Tabs dem Fenster hinzufügen
