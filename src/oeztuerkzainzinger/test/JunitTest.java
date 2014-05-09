@@ -7,6 +7,7 @@ import oeztuerkzainzinger.cipher.KeywordCipher;
 import oeztuerkzainzinger.cipher.MonoAlphabeticCipher;
 import oeztuerkzainzinger.cipher.ShiftCipher;
 import oeztuerkzainzinger.cipher.SubstitutionCipher;
+import oeztuerkzainzinger.cipher.TranspositionCipher;
 import oeztuerkzainzinger.gui.GUI;
 
 import org.junit.Test;
@@ -103,5 +104,10 @@ public class JunitTest {
 		new FalscherParameterException();
 		new FalscherParameterException("Falsch Parameter");
 	}
-		g.actionPerformed();
+	@Test
+	public void testTranspo() throws FalscherParameterException{
+		TranspositionCipher tc=new TranspositionCipher(2);
+		tc.encrypt("lukas");
+		tc.decrypt("zainzinger");		
+	}
 }
