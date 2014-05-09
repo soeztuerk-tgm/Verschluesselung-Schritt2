@@ -103,4 +103,5 @@ public class JunitTest {
 		new FalscherParameterException();
 		new FalscherParameterException("Falsch Parameter");
 	}
+		g.actionPerformed();
 }
