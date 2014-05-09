@@ -21,7 +21,13 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		this.keyword = keyword;
 		setKeyword(this.keyword);
 	}
-
+	/**
+	 * Die Methode setKeyword besitzt einen parameter keyword mit dem dann das
+	 * geheime Alphabet mittels dem KeywordCipher-Verfahren generiert werden soll.
+	 * 
+	 * @param keyword
+	 * @throws FalscherParameterException
+	 */
 	public void setKeyword(String keyword) throws FalscherParameterException {
 		String alpha = "abcdefghijklmnopqrstuvwxyzäüöß";
 

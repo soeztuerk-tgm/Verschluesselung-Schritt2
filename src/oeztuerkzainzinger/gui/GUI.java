@@ -19,7 +19,6 @@ import oeztuerkzainzinger.cipher.ShiftCipher;
  * @author Sefa Öztürk
  *
  */
-
 public class GUI extends JFrame implements ActionListener{
 	//tab und panels
 	JTabbedPane tab;
@@ -38,10 +37,15 @@ public class GUI extends JFrame implements ActionListener{
 	JTextField sceingabe,scgeheimalphabet,worteingabe2, ausgabe2;
 	JButton scalphaerstellen,scdecrypt,scencrypt;
 	/////////////////////////////////////////
-
+	/**
+	 * Default-Konstruktor
+	 */
 	public GUI(){
 	}
-
+	/**
+	 * Hier wird einfach das Hauptfenster mit den Tabs erstellt
+	 * @param leerer Parameter
+	 */
 	public GUI(String leer) {
 		//Deklarierung der Hauptkomponenten
 		tab=new JTabbedPane();
@@ -164,7 +168,10 @@ public class GUI extends JFrame implements ActionListener{
 		this.setSize(660,400);
 		this.setVisible(true);
 	}
-
+	/**
+	 * Die Methode actionPerformed führt die einzelne Funktionen beim anwenden der GUI-Komponente
+	 * aus der jeweiligen Klasse
+	 */
 	public void actionPerformed(ActionEvent e) {
 		MonoAlphabeticCipher mac=new MonoAlphabeticCipher();
 		KeywordCipher kc=new KeywordCipher();

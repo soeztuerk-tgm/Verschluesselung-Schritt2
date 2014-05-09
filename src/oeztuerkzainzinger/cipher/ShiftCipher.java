@@ -14,13 +14,23 @@ public class ShiftCipher extends MonoAlphabeticCipher {
 	private int wert;
 	public String shiftgeheim = "";
 	public ShiftCipher(){
-
+	/**
+	 * Der Konstruktor besitzt einen Parameter value, mit dem der Wert für
+	 * die Verschiebung der einzelnen Buchstaben im Alphabet
+	 * 
+	 * @param value
+	 * @throws FalscherParameterException
+	 */
 	}
 	public ShiftCipher(int value) throws FalscherParameterException {
 		this.wert = value;
 		setShiftCipher(this.wert);
 	}
-
+	/**
+	 * 
+	 * @param wert
+	 * @throws FalscherParameterException
+	 */
 	public void setShiftCipher(int wert) throws FalscherParameterException{
 		try{
 			if(wert>=0&&wert<=30){
