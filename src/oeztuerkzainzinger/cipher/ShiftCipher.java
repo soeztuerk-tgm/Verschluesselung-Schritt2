@@ -16,7 +16,7 @@ public class ShiftCipher extends MonoAlphabeticCipher {
 	public ShiftCipher(){
 	/**
 	 * Der Konstruktor besitzt einen Parameter value, mit dem der Wert für
-	 * die Verschiebung der einzelnen Buchstaben im Alphabet
+	 * die Verschiebung der einzelnen Buchstaben im Alphabet.
 	 * 
 	 * @param value
 	 * @throws FalscherParameterException

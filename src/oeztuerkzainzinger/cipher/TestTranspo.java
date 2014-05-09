@@ -4,6 +4,7 @@
 package oeztuerkzainzinger.cipher;
 
 /**
+ * 
  * @author lukaszainzinger
  *
  */

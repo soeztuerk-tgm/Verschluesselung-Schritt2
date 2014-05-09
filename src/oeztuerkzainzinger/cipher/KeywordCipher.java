@@ -38,7 +38,7 @@ public class KeywordCipher extends MonoAlphabeticCipher {
 		int lengthK = kennwort.length;
 		String restAlpha = "";
 
-		// 1. Zuerst geheim in keyword speichern
+		// 1. Zuerst geheim in keyword speichern.
 		for (int i = 0; i < lengthK; i++) {
 			geheim[i] = kennwort[i];
 		}

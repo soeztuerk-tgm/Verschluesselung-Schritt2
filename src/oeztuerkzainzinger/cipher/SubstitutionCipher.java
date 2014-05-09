@@ -8,7 +8,7 @@ package oeztuerkzainzinger.cipher;
 public class SubstitutionCipher extends MonoAlphabeticCipher {
 	
 	/**
-	 * Default Konstruktor mit dem Parameter secretAlphabet
+	 * Default Konstruktor mit dem Parameter secretAlphabet.
 	 * 
 	 * @param secretAlphabet
 	 * @throws AnzahlZeichenException

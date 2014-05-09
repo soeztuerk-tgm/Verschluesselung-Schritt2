@@ -11,7 +11,12 @@ import oeztuerkzainzinger.cipher.TranspositionCipher;
 import oeztuerkzainzinger.gui.GUI;
 
 import org.junit.Test;
-
+/**
+ * Die Testklasse testet alle Klassen mit deren Methoden
+ * 
+ * @author Sefa Öztürk, Zainzinger Lukas
+ *
+ */
 public class JunitTest {
 	//Attribut hallo ist das Parameter zum ent- bzw. verschlüsseln
 	String text="hallo";

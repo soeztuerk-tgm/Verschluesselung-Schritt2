@@ -4,12 +4,13 @@
 package oeztuerkzainzinger.cipher;
 
 /**
- * TranspositionCipher
+ * TranspositionCipher 
  * @author lukaszainzinger, oeztuerk
  *
  */
 
 public class TranspositionCipher implements Cipher {
+	//Attribut
 	private int transpositionlvl; 
 	
 	public TranspositionCipher(int translvl) throws FalscherParameterException{

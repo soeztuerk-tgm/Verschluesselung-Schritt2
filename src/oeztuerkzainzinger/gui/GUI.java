@@ -20,7 +20,7 @@ import oeztuerkzainzinger.cipher.ShiftCipher;
  *
  */
 public class GUI extends JFrame implements ActionListener{
-	//tab und panels
+	//tab und Panels
 	JTabbedPane tab;
 	JPanel keyword, shift, trans;
 
